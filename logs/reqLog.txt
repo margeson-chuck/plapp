@@ -90,3 +90,13 @@
 20250123	17:26:22	ec2111ba-a30b-4a4b-af93-f96c6b42e848	DELETE	undefined	/playlists
 20250123	17:27:02	55b117ec-83c0-4255-8aa0-7de79ab3fa79	GET	undefined	/playlists/as3
 20250123	17:27:54	513c1360-358b-42fd-97eb-1f63f5a4a1b3	GET	undefined	/playlists/as3
+20250125	14:14:17	7118ebe9-d9aa-40d9-8a26-ad2fc51ae69d	GET	undefined	/playlists
+20250125	14:19:17	45579d1c-b3e5-4694-b402-30d174845905	POST	undefined	/playlists
+20250125	14:20:21	745bbd1b-72a8-478f-ade4-b9d114564a95	POST	undefined	/playlists
+20250125	14:21:58	9a647baf-f852-4654-aa58-823bb3f68fd5	POST	undefined	/playlists
+20250125	14:24:31	48be3388-9738-48b0-b6c9-5543c4975aeb	POST	undefined	/playlists
+20250125	14:26:20	f59d263b-baef-43dd-9c51-86572b6389be	POST	undefined	/playlists
+20250125	14:31:22	635b9b43-9478-4309-b376-118ef4bf7f2b	PUT	undefined	/playlists
+20250125	14:31:57	ba2c7a49-f382-4875-9a4f-2a4e1ec68ff0	DELETE	undefined	/playlists
+20250125	14:33:25	2f3149ba-560d-425a-a5c5-ea1583841def	DELETE	undefined	/playlists/wm
+20250125	14:33:43	423f178f-4e96-4de4-a4c1-77104a2ee6c6	GET	undefined	/playlists/wm

@@ -2,44 +2,16 @@ const express = require('express');
 const router =  express.Router();
 const path = require('path');
 const data = {};
-data.playlists = require('../../data/playlists.json');
-
+data.playlists = require('../../model/playlists.json');
+const playlistsController = require('../../controllers/playlistsController');
+ 
 router.route('/')
-    .get((req,res) => {
-        console.log(data.playlists);
-        res.json(data.playlists);
-    })
-    .post((req, res) => {
-        res.json({
-            //"playlistcode": req.body.playlistcode,
-            "playlisttitle": req.body.playlisttitle,
-            "playlistcreatedyear": req.body.playlistcreatedyear
-        });
-    })
-    .put((req, res) => {
-        res.json({
-            "playlisttitle": req.body.playlisttitle,
-            "playlistcreatedyear": req.body.playlistcreatedyear
-        });
-    })
-    .put((req, res) => {
-        res.json({
-            "playlisttitle": req.body.playlisttitle,
-            "playlistcreatedyear": req.body.playlistcreatedyear
-        });
-    })
-    .delete((req,res) => {
-        res.json({
-            "playlistcode": req.body.playlistcode
-        })
-    })
-
+    .get(playlistsController.getAllPlaylists)
+    .post(playlistsController.createNewPlaylist)
+    .put(playlistsController.updatePlaylist)
+    .delete(playlistsController.deletePlaylist)
 
 router.route('/:playlistcode')
-    .get((req,res) => {
-        res.json({
-            "playlistcode": req.params.playlistcode
-        })
-    })    
+    .get(playlistsController.getPlaylist)    
 
 module.exports = router;
