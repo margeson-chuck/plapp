@@ -100,3 +100,9 @@
 20250125	14:31:57	ba2c7a49-f382-4875-9a4f-2a4e1ec68ff0	DELETE	undefined	/playlists
 20250125	14:33:25	2f3149ba-560d-425a-a5c5-ea1583841def	DELETE	undefined	/playlists/wm
 20250125	14:33:43	423f178f-4e96-4de4-a4c1-77104a2ee6c6	GET	undefined	/playlists/wm
+20250126	10:21:19	84acfdae-58df-4401-890a-e8307b88f918	POST	undefined	/register
+20250126	10:24:30	e4166091-d683-438b-92ec-8f45d3e47243	POST	undefined	/register
+20250126	10:25:45	7d3c8c09-5685-4d36-902d-5f2388749bce	POST	undefined	/register
+20250126	10:42:07	391233f1-1f0a-453a-b22e-0e5eff66aa43	POST	undefined	/auth
+20250126	10:42:23	2c31e0a2-31b7-463c-9a45-a8fdd17f12fc	POST	undefined	/auth
+20250126	10:43:10	376169c6-8930-4a56-91ab-461f1b31bd46	POST	undefined	/register

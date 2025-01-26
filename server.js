@@ -32,6 +32,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', require('./routes/root'));
+app.use('/register', require('./routes/api/register'));
+app.use('/auth', require('./routes/api/auth'));
 app.use('/playlists', require('./routes/api/playlists'));
 app.use('/employees', require('./routes/api/employees'));
 
