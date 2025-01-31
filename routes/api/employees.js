@@ -1,11 +1,11 @@
 const express = require('express');
 const router =  express.Router();
 const data = {};
-data.employees = require('../../data/employees.json');
+data.employees = require('../../model/employees.json');
 
 router.route('/')
     .get((req,res) => {
-        //console.log(data.employees);
+        //console.log(model.employees);
         res.json(data.employees);
     })
     .post((req, res) => {
