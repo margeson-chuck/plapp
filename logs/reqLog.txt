@@ -122,3 +122,11 @@
 20250131	15:19:40	e02fe3ed-b3d8-4921-af4b-6b127bc792b7	GET	undefined	/playlists/cmcd
 20250131	15:19:46	de3f1a89-7bb6-49e8-a6e7-f5009e7793ec	GET	undefined	/playlists/cmcdxx
 20250131	15:19:53	885ebcbf-7796-4f59-b66b-cb29778c2154	GET	undefined	/playlists/cmcd
+20250131	16:15:34	af4fbde0-920b-46ee-bd91-4dd1f7071424	POST	undefined	/register
+20250131	16:18:07	5336c072-e03b-4446-8790-248be3497ac9	POST	undefined	/register
+20250131	16:18:16	7254c260-6270-4af1-9b0b-6f869c3f7901	POST	undefined	/register
+20250131	16:33:08	cbe93670-1891-4c5a-ad57-c7dac159e7a3	POST	undefined	/auth
+20250131	16:33:19	32c4bf75-1665-4254-9a16-de5aab67dd50	POST	undefined	/auth
+20250131	16:33:28	fdebff06-df6a-43ac-adc2-5ffcbe9d2d85	POST	undefined	/auth
+20250131	16:33:34	2627f6a3-ea0c-4002-a32e-d7812f03a22d	POST	undefined	/auth
+20250131	16:33:41	93d0bf6d-229b-4d84-95bf-587d9e4fd148	POST	undefined	/auth
