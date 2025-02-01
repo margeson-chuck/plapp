@@ -9,7 +9,6 @@ const PORT =  process.env.PORT ||3500;
 
 // custom middleware logger
 app.use(logger);
-
 // app.use(function (req, res, next) {
 //     res.setHeader(
 //       'Content-Security-Policy-Report-Only', "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; frame-src 'self'"
@@ -18,18 +17,17 @@ app.use(logger);
 //     next();
 //   });
 
-//Cross Origin Resource Sharing
-app.use(cors());
+app.use(cors(corsOptions));
+//app.use(cors());
 
-// built-in middleware to handle urlencoded form data (in other words -> form data)
+// built-in middelware to handle urlencoded data, form data
 app.use(express.urlencoded({ extended: false }));
 
-//built-in middleware for json
+// built-in middleware for json
 app.use(express.json());
 
-//serve static files
-app.use(express.static(path.join(__dirname, '/public')));
-
+// serve static files
+app.use('/', express.static(path.join(__dirname, '/public')));
 
 //routes
 app.use('/', require('./routes/root'));
@@ -38,17 +36,19 @@ app.use('/auth', require('./routes/auth'));
 app.use('/playlists', require('./routes/api/playlists'));
 app.use('/employees', require('./routes/api/employees'));
 
-app.all('*', (req,res) => {
+app.all('*', (req, res) => {
+    console.log(req.body);
     res.status(404);
     if (req.accepts('html')) {
         res.sendFile(path.join(__dirname, 'views', '404.html'));
     } else if (req.accepts('json')) {
-        res.json({ error: "404 Not Found"});
+        res.json({ "error": "404 Not Found" });
     } else {
         res.type('txt').send("404 Not Found");
     }
 });
 
+
 app.use(errorHandler);
- 
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

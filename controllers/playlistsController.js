@@ -1,9 +1,9 @@
 const data = {
     playlists: require('../model/playlists.json'),
-    setPlaylists: function(data) { this.playlists = data }
-};
+    setPlaylists: function (data) { this.playlists = data }
+}
 
-const getAllPlaylists = (req,res) => {
+const getAllPlaylists = (req, res) => {
     res.json(data.playlists); 
 }
 
