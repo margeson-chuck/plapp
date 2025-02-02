@@ -1,4 +1,25 @@
-20250123	10:32:12	e087b42b-8be4-475c-9658-9f9d8d445016	Error: ENOENT: no such file or directory, stat 'D:\inetpub\nodejs\plapp\views\subdfir\index.html'
-20250123	10:32:31	802968c3-0062-4800-9330-767725ed1867	Error: ENOENT: no such file or directory, stat 'D:\inetpub\nodejs\plapp\views\subdfir\test.html'
-20250123	10:33:02	04e6e5f3-883e-4efa-ac91-aff32543ceb6	Error: ENOENT: no such file or directory, stat 'D:\inetpub\nodejs\plapp\views\subdfir\test.html'
-20250201	11:16:31	2271e28b-df52-4797-af23-35e91f125d4b	Error: Not allowed by CORS
+20240428	05:14:18	0b50e2ad-e371-4d69-a076-be1a3664c3c9	Error: Not allowed by CORS
+20240428	05:35:51	e2faf738-e28b-4b80-affa-11ef6fb092e7	Error: Not allowed by CORS	function status(code) {
+  if ((typeof code === 'string' || Math.floor(code) !== code) && code > 99 && code < 1000) {
+    deprecate('res.status(' + JSON.stringify(code) + '): use res.status(' + Math.floor(code) + ') instead')
+  }
+  this.statusCode = code;
+  return this;
+}
+20240428	05:35:51	9ecbe77e-6b42-4e53-875c-da27e5d565c3	Error: Not allowed by CORS	function status(code) {
+  if ((typeof code === 'string' || Math.floor(code) !== code) && code > 99 && code < 1000) {
+    deprecate('res.status(' + JSON.stringify(code) + '): use res.status(' + Math.floor(code) + ') instead')
+  }
+  this.statusCode = code;
+  return this;
+}
+20240428	05:36:34	29500865-bca8-416e-b262-8e6b18ec9352	Error: Not allowed by CORS
+20240428	05:36:34	74af6732-ebdd-4891-8018-a6b305922ab9	Error: Not allowed by CORS
+20240429	20:27:37	2592d1a6-557f-412b-b523-b8c881ef91cc	TypeError: res.status(...).sjon is not a function
+20240429	20:29:23	10467363-8c3a-4317-8bd5-631ff90849c7	ReferenceError: emp is not defined
+20240429	20:38:25	2f34a059-a1e5-4c6c-8b81-b1049b7bfaee	ReferenceError: emp is not defined
+20240429	20:39:53	5d702b6f-8970-4131-86f2-2e6391cf2449	ReferenceError: id is not defined
+20240501	17:35:20	7f929d07-ee4a-43fc-a962-01cf01ce0bc5	SyntaxError: Unexpected token 'w', "{ "user":walt1", "p"... is not valid JSON
+20240501	17:35:40	010e6245-ff02-49b2-a4ab-218ede6976b9	SyntaxError: Unexpected token ';', ..."t1", "pwd"; "Aa$1234"... is not valid JSON
+20250202	10:59:24	7deb99d9-2c70-4084-b534-0e0096796f7e	ReferenceError: log is not defined
+20250202	15:51:14	55366bfc-7138-4435-9518-ecdcfa15110b	Error: "exiresIn" is not allowed in "options"

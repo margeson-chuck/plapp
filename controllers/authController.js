@@ -14,9 +14,9 @@ const handleLogin = async (req, res) => {
     if (!user || !pwd) return res.status(400).json({ 'message': 'Username and password are required.' });
     const foundUser = usersDB.users.find(person => person.username === user);
     if (!foundUser) return res.sendStatus(401); //Unauthorized 
-    console.log('foundUser: ' + foundUser);
-    console.log('pwd: ' + pwd);
-    console.log('foundUser.password: ' + foundUser.password);
+    //console.log('foundUser: ' + foundUser);
+    //console.log('pwd: ' + pwd);
+    //console.log('foundUser.password: ' + foundUser.password);
     
     // evaluate password 
     const match = await bcrypt.compare(pwd, foundUser.password);
@@ -24,29 +24,25 @@ const handleLogin = async (req, res) => {
     if (match) {
         // create JWTs
         const accessToken = jwt.sign(
-            {"username": foundUser.username },
+            {"username": foundUser.username},
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: '60s'}
-        )
+            {expiresIn: '30s'}
+        );
         const refreshToken = jwt.sign(
-            {"username": foundUser.username },
+            {"username": foundUser.username},
             process.env.REFRESH_TOKEN_SECRET,
-            { expiresIn: '1d'}
-        )
-        
-        //save refreshtoken in db
+            {expiresIn: '1d'}
+        );
+        //saving refresh token with current user
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
-        const currentUser = { ...foundUser, refreshToken };
+        const currentUser = {...foundUser, refreshToken};
         usersDB.setUsers([...otherUsers, currentUser]);
-        await fsPromises.writeFile (
+        await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
         );
-        //console.log('accessToken: ' + accessToken );
-        res.cookie('jwt', refreshToken,  { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
+        res.cookie('jwt', refreshToken, {httpOnly: true, maxAge: 24 * 60 * 60 * 10000});
         res.json({ accessToken });
-
-        //res.json({ 'success': `User ${user} is logged in!` });
     } else {
         res.sendStatus(401);
     }
