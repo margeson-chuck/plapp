@@ -7,14 +7,17 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials');
 const PORT =  process.env.PORT ||3500;
 
 // custom middleware logger
 app.use(logger);
 
+// Credentials check before CORS
+app.use(credentials);
 
+// Cross Origin Resource Sharing
 app.use(cors(corsOptions));
-//app.use(cors());
 
 // built-in middelware to handle urlencoded data, form data
 app.use(express.urlencoded({ extended: false }));

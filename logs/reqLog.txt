@@ -272,3 +272,4 @@
 20250202	16:15:57	6b8c3d97-5696-4d12-8da8-eacc2077dc9b	POST	undefined	/auth
 20250202	16:16:06	41f0313e-a2d4-4e4e-b53f-cfe34ef5b677	GET	undefined	/refresh
 20250202	16:16:11	e8b3791e-bc59-4e8f-a330-8e6a278f6fa7	GET	undefined	/logout
+20250202	16:56:22	eee11af7-6051-4c40-b9e3-4fab2ff37764	POST	undefined	/auth
