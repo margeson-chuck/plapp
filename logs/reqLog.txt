@@ -273,3 +273,7 @@
 20250202	16:16:06	41f0313e-a2d4-4e4e-b53f-cfe34ef5b677	GET	undefined	/refresh
 20250202	16:16:11	e8b3791e-bc59-4e8f-a330-8e6a278f6fa7	GET	undefined	/logout
 20250202	16:56:22	eee11af7-6051-4c40-b9e3-4fab2ff37764	POST	undefined	/auth
+20250203	14:42:04	7338675c-462a-44fb-9b76-35a8362f391d	GET	undefined	/playlists
+20250203	14:42:31	fbc3e3b3-3b8c-4702-a9d2-44d0adaff611	GET	undefined	/playlists
+20250203	14:42:59	d6e3b40a-667c-4100-a6a4-ed88707bcdd8	POST	undefined	/auth
+20250203	14:43:16	36bd4549-bcbc-4e2c-9be3-c935f8f8a164	GET	undefined	/playlists
