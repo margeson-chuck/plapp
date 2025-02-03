@@ -78,5 +78,10 @@
         "playlistcode": "wh",
         "playlisttitle": "Windham Hill",
         "playlistcreatedyear": "2024"
+    },
+    {
+        "playlistcode": "whxxx",
+        "playlisttitle": "Windham Hillxxxx",
+        "playlistcreatedyear": "2025"
     }
 ]

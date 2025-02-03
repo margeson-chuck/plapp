@@ -23,3 +23,6 @@
 20240501	17:35:40	010e6245-ff02-49b2-a4ab-218ede6976b9	SyntaxError: Unexpected token ';', ..."t1", "pwd"; "Aa$1234"... is not valid JSON
 20250202	10:59:24	7deb99d9-2c70-4084-b534-0e0096796f7e	ReferenceError: log is not defined
 20250202	15:51:14	55366bfc-7138-4435-9518-ecdcfa15110b	Error: "exiresIn" is not allowed in "options"
+20250203	15:59:14	94c41ddd-019e-4a5f-8ab2-5ca2fa6c0d59	TypeError: authHeader?.starstWith is not a function
+20250203	16:01:03	97111352-6800-4535-9c7d-e2fd934cccdc	TypeError: Cannot read properties of undefined (reading 'username')
+20250203	16:13:54	4cc83f21-a1c3-48c7-bf17-885ff2efd67d	TypeError: Cannot read properties of undefined (reading 'username')
