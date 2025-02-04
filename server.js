@@ -1,3 +1,4 @@
+const db = require('./config/dbConnect');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -8,7 +9,7 @@ const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
-const PORT =  process.env.PORT ||3500;
+const PORT =  process.env.PORT || 3500;
 
 // custom middleware logger
 app.use(logger);
@@ -40,6 +41,7 @@ app.use('/logout', require('./routes/logout'));
 app.use(verifyJWT);
 app.use('/playlists', require('./routes/api/playlists'));
 app.use('/employees', require('./routes/api/employees'));
+app.use('/pl', require('./routes/api/pl'));
 
 app.all('*', (req, res) => {
     console.log(req.body);
