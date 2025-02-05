@@ -9,10 +9,10 @@ const getAllPlaylists = async (req, res) => {
     res.send(rows)  
 }
 
-const getPlaylistById = async (req, res) => {
-    const [rows] = await db.query('select distinct playlistcode, playlisttitle, playlistcreatedyear from plmasterid where playlistcode = ?', [req.body.playlistcode])
-    res.send(rows)  
-}
+// const getPlaylistByIdx = async (req, res) => {
+//     [rows] = await db.query('select distinct playlistcode, playlisttitle, playlistcreatedyear from plmasterid where playlistcode = ?', [req.body.playlistcode])
+//     res.send(rows)  
+// }
 
 
 const createPlaylist = (req, res) => {
@@ -59,12 +59,27 @@ const deletePlaylist = (req,res) => {
 
 
 const getPlaylist = async (req, res) => {
-
-    [rows] = await db.query('select * from plmasterid where playlistcode = ?', [req.params.playlistcode])
-    if (!rows) {
-        return res.status(400).json({ 'message': `playlistcode ${req.params.playlistcode} not found`})
+    const callType = req.params.calltype;
+    const playlistcode = req.params.playlistcode;
+    console.log('calltype->' + callType);
+    console.log('playlistcode->' + playlistcode);
+    if (callType !== 'plcodes' && callType !== 'plfind') {
+        return res.status(400).json({ 'message': `invalid calltype [${callType}]`})
     }
-    res.send(rows);
+    if (callType === 'plcodes') {
+        [rows] = await db.query('select * from plmasterid where playlistcode = ?', [req.params.playlistcode])
+        if (!rows) {
+            return res.status(400).json({ 'message': `playlistcode ${req.params.playlistcode} not found`})
+        }
+        res.send(rows);
+    } else if (callType === 'plfind') {
+        [rows] = await db.query('select distinct playlistcode, playlisttitle, playlistcreatedyear from plmasterid where playlistcode = ?', [playlistcode])
+        if (!rows) {
+            return res.status(400).json({ 'message': `playlistcode ${req.params.playlistcode} not found`})
+        }
+        res.send(rows)  
+}
+
 }
 
 module.exports = {
